@@ -27,21 +27,18 @@ npm install --save ui-box
 ## Usage
 
 ```jsx
-import Box from 'ui-box'
+import Box from "ui-box";
 
 function Button(props) {
-  return (
-    <Box
-      is="button"
-      padding="10px"
-      background="red"
-      {...props}
-    />
-  )
+  return <Box is="button" padding="10px" background="red" {...props} />;
 }
 
 function Example() {
-  return <Button disabled margin="10px">Hi</Button>
+  return (
+    <Button disabled margin="10px">
+      Hi
+    </Button>
+  );
 }
 ```
 
@@ -58,8 +55,11 @@ Default: `'div'`
 
 Lets you change the underlying element type. You can pass either a string to change the DOM element type, or a React component type to inherit another component. The component just needs to accept a `className` prop to work. A good example is inheriting the [react-router `Link` component](https://reacttraining.com/react-router/web/api/Link).
 E.g:
+
 ```jsx
-<Box is={Link} to="/login">Login</Box>
+<Box is={Link} to="/login">
+  Login
+</Box>
 ```
 
 ##### innerRef
@@ -84,145 +84,145 @@ The className prop you know and love. Internally it gets enhanced with additiona
 
 All of these CSS properties are support. You can pass either a string or a number (which gets converted to a `px` value). The shorthand properties with repeated values only accept a single value, e.g. `margin="10px"` works but `margin="10px 20px"` does not. You can use the x/y props (e.g. `marginX`/`marginY`) to achieve the same thing.
 
-* `alignContent`
-* `alignItems`
-* `alignSelf`
-* `background`
-* `backgroundBlendMode`
-* `backgroundClip`
-* `backgroundColor`
-* `backgroundImage`
-* `backgroundOrigin`
-* `backgroundPosition`
-* `backgroundRepeat`
-* `backgroundSize`
-* `border`
-* `borderBottom`
-* `borderBottomColor`
-* `borderBottomLeftRadius`
-* `borderBottomRightRadius`
-* `borderBottomStyle`
-* `borderBottomWidth`
-* `borderColor`
-* `borderLeft`
-* `borderLeftColor`
-* `borderLeftStyle`
-* `borderLeftWidth`
-* `borderRadius`
-* `borderRight`
-* `borderRightColor`
-* `borderRightStyle`
-* `borderRightWidth`
-* `borderStyle`
-* `borderTop`
-* `borderTopColor`
-* `borderTopLeftRadius`
-* `borderTopRightRadius`
-* `borderTopStyle`
-* `borderTopWidth`
-* `borderWidth`
-* `bottom`
-* `boxShadow`
-* `boxSizing` - Set to `border-box` by default.
-* `clear`
-* `color`
-* `columnGap`
-* `cursor`
-* `display`
-* `flex`
-* `flexBasis`
-* `flexDirection`
-* `flexFlow`
-* `flexGrow`
-* `flexShrink`
-* `flexWrap`
-* `float`
-* `font`
-* `fontFamily`
-* `fontSize`
-* `fontStyle`
-* `fontVariant`
-* `fontWeight`
-* `gap`
-* `grid`
-* `gridArea`
-* `gridAutoColumns`
-* `gridAutoFlow`
-* `gridAutoRows`
-* `gridColumn`
-* `gridColumnEnd`
-* `gridColumnGap`
-* `gridColumnStart`
-* `gridGap`
-* `gridRow`
-* `gridRowEnd`
-* `gridRowGap`
-* `gridRowStart`
-* `gridTemplate`
-* `gridTemplateAreas`
-* `gridTemplateColumns`
-* `gridTemplateRows`
-* `height`
-* `justifyContent`
-* `justifyItems`
-* `justifySelf`
-* `left`
-* `letterSpacing`
-* `lineHeight`
-* `listStyle`
-* `listStyleImage`
-* `listStylePosition`
-* `listStyleType`
-* `margin`
-* `marginBottom`
-* `marginLeft`
-* `marginRight`
-* `marginTop`
-* `marginX` - Sets `marginLeft` and `marginRight` to the same value.
-* `marginY` - Sets `marginTop` and `marginBottom` to the same value.
-* `maxHeight`
-* `maxWidth`
-* `minHeight`
-* `minWidth`
-* `opacity`
-* `order`
-* `overflow`
-* `overflowX`
-* `overflowY`
-* `padding`
-* `paddingBottom`
-* `paddingLeft`
-* `paddingRight`
-* `paddingTop`
-* `paddingX` - Sets `paddingLeft` and `paddingRight` to the same value.
-* `paddingY` - Sets `paddingTop` and `paddingBottom` to the same value.
-* `placeContent`
-* `placeItems`
-* `placeSelf`
-* `pointerEvents`
-* `position`
-* `right`
-* `rowGap`
-* `textAlign`
-* `textDecoration`
-* `textOverflow`
-* `textShadow`
-* `textTransform`
-* `top`
-* `transform`
-* `transformOrigin`
-* `transition`
-* `transitionDelay`
-* `transitionDuration`
-* `transitionProperty`
-* `transitionTimingFunction`
-* `userSelect`
-* `visibility`
-* `whiteSpace`
-* `width`
-* `wordBreak`
-* `wordWrap`
-* `zIndex`
+- `alignContent`
+- `alignItems`
+- `alignSelf`
+- `background`
+- `backgroundBlendMode`
+- `backgroundClip`
+- `backgroundColor`
+- `backgroundImage`
+- `backgroundOrigin`
+- `backgroundPosition`
+- `backgroundRepeat`
+- `backgroundSize`
+- `border`
+- `borderBottom`
+- `borderBottomColor`
+- `borderBottomLeftRadius`
+- `borderBottomRightRadius`
+- `borderBottomStyle`
+- `borderBottomWidth`
+- `borderColor`
+- `borderLeft`
+- `borderLeftColor`
+- `borderLeftStyle`
+- `borderLeftWidth`
+- `borderRadius`
+- `borderRight`
+- `borderRightColor`
+- `borderRightStyle`
+- `borderRightWidth`
+- `borderStyle`
+- `borderTop`
+- `borderTopColor`
+- `borderTopLeftRadius`
+- `borderTopRightRadius`
+- `borderTopStyle`
+- `borderTopWidth`
+- `borderWidth`
+- `bottom`
+- `boxShadow`
+- `boxSizing` - Set to `border-box` by default.
+- `clear`
+- `color`
+- `columnGap`
+- `cursor`
+- `display`
+- `flex`
+- `flexBasis`
+- `flexDirection`
+- `flexFlow`
+- `flexGrow`
+- `flexShrink`
+- `flexWrap`
+- `float`
+- `font`
+- `fontFamily`
+- `fontSize`
+- `fontStyle`
+- `fontVariant`
+- `fontWeight`
+- `gap`
+- `grid`
+- `gridArea`
+- `gridAutoColumns`
+- `gridAutoFlow`
+- `gridAutoRows`
+- `gridColumn`
+- `gridColumnEnd`
+- `gridColumnGap`
+- `gridColumnStart`
+- `gridGap`
+- `gridRow`
+- `gridRowEnd`
+- `gridRowGap`
+- `gridRowStart`
+- `gridTemplate`
+- `gridTemplateAreas`
+- `gridTemplateColumns`
+- `gridTemplateRows`
+- `height`
+- `justifyContent`
+- `justifyItems`
+- `justifySelf`
+- `left`
+- `letterSpacing`
+- `lineHeight`
+- `listStyle`
+- `listStyleImage`
+- `listStylePosition`
+- `listStyleType`
+- `margin`
+- `marginBottom`
+- `marginLeft`
+- `marginRight`
+- `marginTop`
+- `marginX` - Sets `marginLeft` and `marginRight` to the same value.
+- `marginY` - Sets `marginTop` and `marginBottom` to the same value.
+- `maxHeight`
+- `maxWidth`
+- `minHeight`
+- `minWidth`
+- `opacity`
+- `order`
+- `overflow`
+- `overflowX`
+- `overflowY`
+- `padding`
+- `paddingBottom`
+- `paddingLeft`
+- `paddingRight`
+- `paddingTop`
+- `paddingX` - Sets `paddingLeft` and `paddingRight` to the same value.
+- `paddingY` - Sets `paddingTop` and `paddingBottom` to the same value.
+- `placeContent`
+- `placeItems`
+- `placeSelf`
+- `pointerEvents`
+- `position`
+- `right`
+- `rowGap`
+- `textAlign`
+- `textDecoration`
+- `textOverflow`
+- `textShadow`
+- `textTransform`
+- `top`
+- `transform`
+- `transformOrigin`
+- `transition`
+- `transitionDelay`
+- `transitionDuration`
+- `transitionProperty`
+- `transitionTimingFunction`
+- `userSelect`
+- `visibility`
+- `whiteSpace`
+- `width`
+- `wordBreak`
+- `wordWrap`
+- `zIndex`
 
 ##### Other props
 
@@ -280,38 +280,43 @@ Object of all the CSS property enhancers (the methods that generate the class na
 
 These enhancer groups are also exported. They're all objects with `{ propTypes, propAliases, propEnhancers }` properties. They're mainly useful for if you want to inherit a subset of the `Box` CSS propTypes in your own components.
 
-* `background`
-* `borderRadius`
-* `borders`
-* `boxShadow`
-* `dimensions`
-* `flex`
-* `interaction`
-* `layout`
-* `list`
-* `opacity`
-* `overflow`
-* `position`
-* `spacing`
-* `text`
-* `transform`
-* `transition`
+- `background`
+- `borderRadius`
+- `borders`
+- `boxShadow`
+- `dimensions`
+- `flex`
+- `interaction`
+- `layout`
+- `list`
+- `opacity`
+- `overflow`
+- `position`
+- `spacing`
+- `text`
+- `transform`
+- `transition`
 
 ### Server side rendering
 
 To render the styles on the server side just use [`ReactDOMServer.renderToString()`](https://reactjs.org/docs/react-dom-server.html#rendertostring) as usual and then call the [`extractStyles()`](#extractstyles) method retrieve the rendered styles and cache. The styles can then be output to a `<style>` tag or an external stylesheet. The cache data should be passed to the [`hydrate()`](#hydratecache) method on the client side before you call [`ReactDOM.hydrate()`](https://reactjs.org/docs/react-dom.html#hydrate).
 
 For example:
+
 ```js
-'use strict'
-const React = require('react')
-const ReactDOMServer = require('react-dom/server')
-const {default: Box, extractStyles} = require('.')
+"use strict";
+const React = require("react");
+const ReactDOMServer = require("react-dom/server");
+const { default: Box, extractStyles } = require(".");
 
-const element = React.createElement(Box, {margin: '10px', color: 'red'}, 'hi')
+const element = React.createElement(
+  Box,
+  { margin: "10px", color: "red" },
+  "hi"
+);
 
-const html = ReactDOMServer.renderToString(element)
-const {styles, cache} = extractStyles()
+const html = ReactDOMServer.renderToString(element);
+const { styles, cache } = extractStyles();
 
 const page = `
 <!DOCTYPE html>
@@ -332,18 +337,18 @@ const page = `
     </script>
   </body>
 </html>
-`
-console.log(page)
+`;
+console.log(page);
 ```
 
 ## Development
 
-* `yarn dev` starts the development Storybook at http://localhost:9009/.
-* `yarn test` runs the linter, unit tests and code coverage.
-* `yarn ava -w` runs the unit tests in watch mode.
-* `yarn ava -u` updates the snapshot tests.
-* `yarn build` transpiles the JavaScript files.
-* `yarn release` releases a new version (requires `np` to be installed globally).
+- `yarn dev` starts the development Storybook at http://localhost:9009/.
+- `yarn test` runs the linter, unit tests and code coverage.
+- `yarn ava -w` runs the unit tests in watch mode.
+- `yarn ava -u` updates the snapshot tests.
+- `yarn build` transpiles the JavaScript files.
+- `yarn release` releases a new version (requires `np` to be installed globally).
 
 ## License
 
